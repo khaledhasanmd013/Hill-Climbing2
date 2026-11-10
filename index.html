@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pro Hill Climb Racing - Ultimate Edition</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-wrapper">
+        <header id="game-header">
+            <div class="stat-box">🪙 কয়েন: <span id="coins">0</span></div>
+            <div class="stat-box fuel-box">⛽ ফুয়েল: 
+                <div id="fuel-bar-container"><div id="fuel-bar"></div></div>
+            </div>
+            <div class="stat-box">🏆 স্কোর: <span id="score">0</span> متر</div>
+        </header>
+        
+        <div id="canvas-container">
+            <canvas id="gameCanvas" width="900" height="500"></canvas>
+            <div id="game-over-screen" class="hidden">
+                <h2>গেম ওভার!</h2>
+                <p>আপনার স্কোর: <span id="final-score">0</span> মিটার</p>
+                <button onclick="restartGame()">পুনরায় খেলুন</button>
+            </div>
+        </div>
+
+        <div id="control-panel">
+            <button id="brake-btn" class="control-btn">ব্রেক / রিভার্স ◀</button>
+            <button id="gas-btn" class="control-btn">এক্সিলারেট / গ্যাস ▶</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
