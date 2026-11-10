@@ -1,0 +1,143 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle, #1b2838, #090e14);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+#game-wrapper {
+    text-align: center;
+    background: rgba(25, 35, 45, 0.85);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.8);
+    border: 2px solid #34495e;
+}
+
+#game-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #111822;
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #2c3e50;
+}
+
+.stat-box {
+    color: #f1c40f;
+}
+
+.fuel-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+#fuel-bar-container {
+    width: 120px;
+    height: 14px;
+    background: #333;
+    border-radius: 7px;
+    overflow: hidden;
+    border: 1px solid #7f8c8d;
+}
+
+#fuel-bar {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, #e74c3c, #2ecc71);
+    transition: width 0.1s linear;
+}
+
+#canvas-container {
+    position: relative;
+    display: inline-block;
+}
+
+canvas {
+    background: linear-gradient(to bottom, #2980b9, #6dd5fa, #ffffff);
+    border-radius: 8px;
+    display: block;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.3);
+}
+
+#game-over-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+#game-over-screen.hidden {
+    display: none;
+}
+
+#game-over-screen h2 {
+    color: #e74c3c;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+#game-over-screen button {
+    margin-top: 15px;
+    padding: 10px 25px;
+    font-size: 16px;
+    font-weight: bold;
+    background: #2ecc71;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+#game-over-screen button:hover {
+    background: #27ae60;
+}
+
+#control-panel {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 12px;
+    gap: 15px;
+}
+
+.control-btn {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: bold;
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: 0.1s;
+}
+
+.control-btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 3px rgba(0,0,0,0.3);
+}
